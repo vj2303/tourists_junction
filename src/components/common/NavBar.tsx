@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import MainButton from "./MainButton";
+import Link from "next/link";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -34,11 +35,13 @@ function NavBar() {
             >
               Our App
             </p>
-            <p
-              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
-            >
-              Contacts
-            </p>
+             <Link href={'/delete'}>
+              <p
+                  className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+                >
+                  Delete Account
+                </p>
+           </Link>
           </div>
           {/* <div className="flex items-center gap-[40px] select-none">
             <p
